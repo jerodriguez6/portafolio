@@ -1,4 +1,4 @@
-@media only screen and(min-width:768px) and (max-width:940px){
+@media (max-width: 768px) {
     body {
         font-family: 'Montserrat', sans-serif;
         overflow-x: hidden;
@@ -56,8 +56,8 @@
         margin: 0 auto;
         width: 80vw;
         height: 40vw;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
+        display: flex;
+        flex-direction: column;
         align-items: center;
       }
       
@@ -74,6 +74,7 @@
          background-color: aqua;
          border: none;
          border-radius: 20px;
+         margin: 0 auto;
          margin-top: 10px;
          cursor: pointer;
          box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, 0.69);
@@ -85,26 +86,25 @@
       }
       
       .main img {
-        width: 200px;
+        width: 70%;
         border: 2px solid aqua;
-        height: 200px;
+        height: auto;
         z-index: 1;
       }
       
       .about {
-        display: grid;
-        grid-template-columns: repeat(10, 1fr);
-        width: 100vw;
-        align-items: center;
+        grid-template-areas: "img"
+                            "info";
       }
       
-      .about img {
-        width: 100%;
-        grid-column: 1/5;
+     .about img {
+        width: 50%;
+        height: 100%;
+        margin: 0 auto;      
       }
       
       .about-info {
-        grid-column: 5/10;
+        width: 80%;
         padding: 3em;
       }
       
@@ -126,7 +126,7 @@
       }
       
       .portfolio {
-        width: 70vw;
+        width: 100%;
         background-color: #176384;
         color: #fff;
         padding: 2em;
@@ -169,7 +169,10 @@
       .card_title {
         padding: 20px;
       }
-      
+      .card_title p {
+        display: none;
+      }
+
       .card_projects-links {
         display: flex;
         justify-content: space-evenly;
@@ -210,8 +213,7 @@
       .contact-headings h2 {
         font-size: 1.7em; 
       }
-      
-      
+        
       .container-contact {
         display: grid;
         padding: 3em;
@@ -220,10 +222,7 @@
       }
       
       .container-contact img {
-        width: 300px;
-        height:400px;
-        bottom: 0px;
-        grid-column: 1/2;
+        display: none; 
       }
       
       .contact-form {

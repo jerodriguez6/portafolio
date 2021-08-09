@@ -70,6 +70,11 @@ body {
   align-items: center;
 }
 
+.main .info-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
 h1 {
   font-size: 2em;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -94,7 +99,8 @@ span {
    cursor: pointer;
    box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, 0.69);
    font-family: Georgia, 'Times New Roman', Times, serif;
-}
+   width: 150px;
+  }
 
 .download-cv:hover {
   background-color: #fff;
@@ -109,21 +115,24 @@ span {
 }
 
 .about {
+  grid-template-areas: "img info";
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+ /* grid-template-columns: repeat(10, 1fr); */ 
   width: 100vw;
   align-items: center;
 }
 
 .about img {
   width: 100%;
-  grid-column: 1/5;
+  /*grid-column: 1/5;*/
+  grid-area: img;
 }
 
 .about-info {
-  grid-column: 5/10;
+  /*grid-column: 5/10;*/
   padding: 3em;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  grid-area: info;
 }
 
 .about-info h2 {
@@ -234,6 +243,9 @@ span {
   display: grid;
   padding: 3em;
   margin: 0 auto;
+  background-image: url("/img/zr.png");
+  background-size: contain;
+  background-repeat: no-repeat;
   
 }
 
